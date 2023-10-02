@@ -26,7 +26,7 @@ namespace CodeReview
             return parent.RootAncestor();
         }
 
-        // return float
+        // return float and make NumberOfDigits a function call
         // function float DigitsPerLimb() { return (float) NumberOfDigits() / NumberOfLimbs(); }
         function DigitsPerLimb() { return NumberOfDigits / NumberOfLimbs(); }
     }
@@ -76,7 +76,7 @@ namespace CodeReview
 		LivingBeing root = john.RootAncestor();
 		Console.writeline(john.name + “’s oldest ancestor is “ + root.name) // should be Tom
 
-		// name should be small case
+		// name should be small case: tom.parent.name
 		Console.WriteLine(“Tom’s parent is “ + tom.parent.Name;)
 
 
