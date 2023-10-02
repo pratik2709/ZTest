@@ -77,7 +77,7 @@ namespace CodeReview
 		Console.writeline(john.name + “’s oldest ancestor is “ + root.name) // should be Tom
 
 		// name should be small case
-        Console.WriteLine(“Tom’s parent is “ + tom.parent.Name;)
+		Console.WriteLine(“Tom’s parent is “ + tom.parent.Name;)
 
 
         JellyFish jelly = new JellyFish( “Jelly” );
