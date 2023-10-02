@@ -47,7 +47,7 @@ namespace CodeReview
                 super().__init__(name)
 
         */
-        // function should be small: function
+        // function should be small case: function
         // 4 is a string and should be an int
         Function override int NumberOfLimbs() { return “4” }
 
@@ -66,10 +66,9 @@ namespace CodeReview
 	    // john in double quotes "John"
 	    // LivingBeing john = new Human( "John" };
 		LivingBeing john = new Human( John };
-		// intialize jane and tom
+		// initialize jane and tom.
 		// LivingBeing jane = new Human( "jane" };
 		// LivingBeing tom = new Human( "tom" };
-		// tom.parent =
 		john.parent = jane;
 		jane.parent = tom;
 
@@ -82,7 +81,8 @@ namespace CodeReview
 
 
         JellyFish jelly = new JellyFish( “Jelly” );
-        // should be float x = jelly.digitsPerLimb()
+
+        // should be float x = jelly.DigitsPerLimb()
         int x = jelly.digitsPerLimb(jelly);
     }
 }
