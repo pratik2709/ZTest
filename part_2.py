@@ -1,19 +1,15 @@
-class BaseCaseOperations:
-    def __init__(self):
-        pass
+from abc import ABC, abstractmethod
 
+class BaseCaseOperations(ABC):
+    @abstractmethod
     def convert_to(self, input_string):
         pass
 
+    @abstractmethod
     def is_valid(self, input_string):
         pass
 
-
-# camelcase
 class CamelCase(BaseCaseOperations):
-    def __init__(self):
-        super().__init__()
-
     def convert_to(self, input_string):
         words = input_string.split()
         camel_case_str = words[0].lower()
@@ -31,11 +27,7 @@ class CamelCase(BaseCaseOperations):
                 return False
         return True
 
-
 class PascalCase(BaseCaseOperations):
-    def __init__(self):
-        super().__init__()
-
     def convert_to(self, input_string):
         words = input_string.split()
         pascal_case_str = ''.join(word.capitalize() for word in words)
@@ -49,13 +41,9 @@ class PascalCase(BaseCaseOperations):
         for i in range(1, len(input_string)):
             if input_string[i].isspace():
                 return False
+        return True
 
-
-# snake_case
 class SnakeCase(BaseCaseOperations):
-    def __init__(self):
-        super().__init__()
-
     def convert_to(self, input_string):
         words = input_string.split()
         snake_case_str = '_'.join(word.lower() for word in words)
@@ -74,12 +62,7 @@ class SnakeCase(BaseCaseOperations):
             return False
         return True
 
-
-# kebab-case
 class KebabCase(BaseCaseOperations):
-    def __init__(self):
-        super().__init__()
-
     def convert_to(self, input_string):
         words = input_string.split()
         kebab_case_str = '-'.join(word.lower() for word in words)
@@ -97,4 +80,3 @@ class KebabCase(BaseCaseOperations):
         if ' ' in input_string:
             return False
         return True
-
