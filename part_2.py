@@ -49,8 +49,6 @@ class PascalCase(BaseCaseOperations):
         for i in range(1, len(input_string)):
             if input_string[i].isspace():
                 return False
-            if input_string[i].isupper() and input_string[i-1].isupper():
-                return False
 
 
 # snake_case
@@ -99,3 +97,4 @@ class KebabCase(BaseCaseOperations):
         if ' ' in input_string:
             return False
         return True
+
